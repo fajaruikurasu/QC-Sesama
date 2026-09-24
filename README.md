@@ -18,3 +18,4 @@ View your app in AI Studio: https://ai.studio/apps/cc0f2a66-e15b-49ee-8bf8-cee54
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+"# QC-Sesama" 
