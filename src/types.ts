@@ -25,11 +25,25 @@ export interface StudentData {
   catatanKhusus?: string;
 }
 
+export interface MasterPreset {
+  id: string;
+  name: string;
+  pemesan: string;
+  sekolah: string;
+  wilayah: string;
+}
+
 export interface OrderConfig {
   namaPemesan: string; // e.g. "CSR PHKT DOBS 2026" / "Dinas Pendidikan"
   nomorPO: string; // e.g. "PO-2026-QC-088"
   tanggal: string;
   namaPetugasQC: string;
+  themeColor?: string;
+  customLogoUrl?: string;
+  namaSekolahHeader?: string;
+  wilayahAlamat?: string;
+  selectedPresetId?: string;
+  presets?: MasterPreset[];
   atkMode?: 'grouped' | 'itemized'; // optional backward compatibility
   atkLayout?: 'opsi-a' | 'opsi-b' | 'opsi-c'; // Opsi A, B, C for 2-column ATK
   identityStyle?: 'opsi-1' | 'opsi-2' | 'opsi-3'; // Visual options for student identity
