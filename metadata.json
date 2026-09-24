@@ -1,0 +1,8 @@
+{
+  "name": "QC Checklist Generator",
+  "description": "Generator lembar checklist lapangan QC seragam dan perlengkapan sekolah ukuran A6 (2x2 pada kertas A4) dari data Excel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

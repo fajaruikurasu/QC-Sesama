@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Printable Sheet Styles */
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+}
+
+/* Screen state: print-container is hidden on screen */
+.print-container {
+  display: none !important;
+}
+
+@media print {
+  html, body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 210mm !important;
+    min-height: 297mm !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide all screen interface elements during print */
+  .no-print,
+  nav,
+  header,
+  aside,
+  button,
+  main,
+  #root > div > header,
+  #root > div > nav,
+  #root > div > main,
+  .print-hidden {
+    display: none !important;
+  }
+
+  /* Force print-container to be visible and take full page */
+  .print-container {
+    display: block !important;
+    visibility: visible !important;
+    position: static !important;
+    width: 210mm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+  }
+
+  .a4-sheet {
+    box-shadow: none !important;
+    margin: 0 auto !important;
+    padding: 4mm !important;
+    width: 210mm !important;
+    min-height: 297mm !important;
+    height: 297mm !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    display: flex !important;
+    flex-direction: column !important;
+    box-sizing: border-box !important;
+    background: #ffffff !important;
+  }
+
+  .a6-card {
+    border-color: #000000 !important;
+    color: #000000 !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+}
+
